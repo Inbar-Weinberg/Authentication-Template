@@ -37,6 +37,7 @@ function App() {
         <Route path="/logout" exact>
           <Logout />
         </Route>
+        <Redirect to="/" />
       </Switch>
     </>
   );

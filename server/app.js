@@ -1,8 +1,11 @@
+const path = require("path");
 const express = require("express");
 const app = express();
-const { authorization, users } = require("./routes");
-const cookieParser = require("cookie-parser");
 
+const cookieParser = require("cookie-parser");
+const { authorization, users } = require("./routes");
+
+//app.use(express.static(path.join(__dirname, "../client/build")));
 app.use(express.json());
 app.use(cookieParser());
 app.use(authorization);
@@ -12,7 +15,7 @@ app.get("/authorization", (req, res) => {
 });
 app.use("/users", users);
 app.use("*", (req, res) => {
-  console.log("by");
-  res.sendStatus(404);
+  //res.status(404).redirect("/");
+  res.status(404).send("bad address");
 });
 module.exports = app;

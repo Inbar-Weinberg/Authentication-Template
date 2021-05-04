@@ -1,4 +1,3 @@
-require("dotenv").config();
 
 const jwt = require("jsonwebtoken");
 const { USERS } = require("../../database");
@@ -43,13 +42,9 @@ function generateAccessToken({ email, password }) {
 }
 
 function generateRefreshToken({ email, password }) {
-  const refreshToken = jwt.sign(
-    { email, password },
-    process.env.REFRESH_TOKEN_SECRET,
-    {
-      expiresIn: "24h",
-    }
-  );
+  const refreshToken = jwt.sign({ email, password }, process.env.REFRESH_TOKEN_SECRET, {
+    expiresIn: "24h",
+  });
   REFRESH_TOKENS.push(refreshToken);
   return refreshToken;
 }
