@@ -3,15 +3,14 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
-  "url": "http://localhost:3001",
+  "url": "http://localhost:8080",
+
   "scripts": {
-    "test": "echo process.env",
     "nodemon": "nodemon index.js",
     "chrome": "start chrome $npm_package_url",
     "dev": "npm run nodemon",
     "dev+": "npm run chrome && npm run nodemon",
-    "start+": "npm run chrome && npm run nodemon",
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Inbar Weinberg <Inbar.Weinber@gmail.com> (https://github.com/Inbar-Weinberg)",
@@ -26,9 +25,5 @@
     "nodemon": "^2.0.7",
     "sequelize": "^6.6.2",
     "sequelize-cli": "^6.2.0"
-  },
-  "notInUse":{
-    "prestart": "cd ../client && npm run build"
-
   }
 }

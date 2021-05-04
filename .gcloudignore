@@ -1,0 +1,7 @@
+**/node_modules/**
+#!include:.gitignore
+
+#included files:
+
+!.env
+

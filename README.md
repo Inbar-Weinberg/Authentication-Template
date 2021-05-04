@@ -8,3 +8,14 @@ For example Token refresh happens immediate with every request to the server.
 
 
 "prestart": "cd ../client && npm run build",
+
+    "test": "echo process.env",
+
+    "start+": "npm run chrome && npm run nodemon",
+
+ 
+ 
+ "notInUse":{
+    "prestart": "cd ../client && npm run build"
+
+  }
