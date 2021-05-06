@@ -1,0 +1,7 @@
+# ignored files
+node_modules
+
+# included files:
+###############
+!.env
+

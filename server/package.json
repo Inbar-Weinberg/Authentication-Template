@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "url": "http://localhost:8080",
-
   "scripts": {
     "nodemon": "nodemon index.js",
     "chrome": "start chrome $npm_package_url",
     "dev": "npm run nodemon",
     "dev+": "npm run chrome && npm run nodemon",
+    "build": "cd ../client && npm run build",
     "start": "node index.js"
   },
   "keywords": [],
